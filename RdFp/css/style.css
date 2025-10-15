@@ -97,10 +97,12 @@ figure:nth-child(3n){
 @media (prefers-color-scheme: dark) {
   /* CSS rules for dark mode go here */
   body {
-    background-color:rgb(39, 0, 0); /* Dark background */
-    color:  #fcfbc4;; /* Light text */
+    background-color:rgb(39, 0, 0);
+    color:  #fcfbc4;; 
   }
   img{
     border-color: black;
   }
+  a{ color: lightblue;
+  }  
 }
