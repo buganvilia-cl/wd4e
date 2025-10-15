@@ -1,0 +1,106 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #fcfbc4;
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+p{
+    width:95%
+}
+
+
+li{
+    margin-top: 20px;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content:space-around;
+    row-gap:10px;
+} 
+
+figcaption{
+    text-align: center;
+}
+
+figure{
+    width:95%;
+    margin:auto;
+}
+
+img{
+    border: 5px solid darkred;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (min-width:772px){
+
+.grid{
+    grid-template-columns: 45% 45%;
+} 
+
+img{
+    border-radius: 50%;
+    padding:1%
+}
+
+figure:nth-last-child(1){ 
+    grid-column:  span 2;
+}
+}
+
+
+@media screen and (min-width:992px){
+
+img{
+    border-radius: 0%;
+}
+figure:nth-last-child(1){   
+    grid-column:  span 1;
+}
+
+figure:nth-child(3n){ 
+    grid-column:  span 2;
+}
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* CSS rules for dark mode go here */
+  body {
+    background-color:rgb(39, 0, 0); /* Dark background */
+    color:  #fcfbc4;; /* Light text */
+  }
+  img{
+    border-color: black;
+  }
+}
