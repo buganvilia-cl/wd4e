@@ -4,10 +4,13 @@ body {
 
     --logo-size:max(3em, min(25vh, 25vw )) ;
     max-width:1200px;
+    margin:auto;
 }
 
+.nl { width:80vw; height: 10%; margin:0; border:0; background-color:red; } 
+
 #SkipMain{
-    position:absolute; top:1em; left:5%;
+    position:absolute; top:1em; left:20%;
 } 
 #SkipMain:focus{
     z-index: 100;
@@ -150,12 +153,16 @@ img{
     border-style: groove;
     border-width: 1px;
     border-color:darkslateblue;
-    padding: 3%;
-    margin:auto;
+    padding: min(3%, 1rem);
+    margin: auto;
     background-color:white;
-    border-radius: 3%;      
+    border-radius: 3%;     
+    
 } 
 
+.imgList{
+    margin:auto;
+}
 
 /*Páginas de proceso creativo*/
 
@@ -164,8 +171,9 @@ img{
     overflow-x: auto;
     background-color: rgb(19, 101, 121, 0.2);
     padding:.5rem;
+    width:fit-content;
     margin:auto;
-    width: 90%;
+    max-width: 90%;
 }
 
 .imgList img{
@@ -176,10 +184,6 @@ img{
      padding: .3em;
 }
 
-
-.imgInList{
-    margin:.1em;
-}
 
 .lightbox .lb-image {
     padding: 0em;
@@ -196,7 +200,7 @@ img{
 }
 
 .trabajos h3{
-           text-align: center;            
+     text-align: center;            
 }
 
 
@@ -208,47 +212,68 @@ img{
 footer {
     background-color: rgb(19, 101, 121, 0.2);
     font-size: 80%;
+    padding: 1%;
+   
 }
 
 
 /* main diferent sizes */
 
-@media screen and (min-width:500px){
+@media screen and (min-width:600px){
 .img_media{
+    
     width:40%;
-     display: inline-block;
+   display:inline-block;
+ 
+}
+.img_tercio{
+   
+    width:39%;
+  display:inline-block;
+     
 }
 }
 
-@media screen and (min-width:700px){
+@media screen and (min-width:800px){
 #proceso{
 display: flex;    
 flex-wrap: wrap;
 justify-content: center;
 }
+
 img {
-    display:block;
+   display:block;
     width:40%;
 }
-.img_media{
-    width:42%;
-     display: block;
-}
+
+
 section{
     display:block;
-    width:52%;
+    width:50%;
     justify-content: center;
     align-content: center;
 }
 
+.p_entero {
+    width:80%;
+} 
+
 #listaTrabajos{ 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; }
+    justify-content: space-around; 
+}
 .trabajos{
     display:inline-block; 
     margin:1em  auto;
     width: 40%;
 
 }
+}
+
+@media screen and (min-width:1000px){
+    .img_tercio{
+    width:25%;
+    margin:auto;
+    }
 }
